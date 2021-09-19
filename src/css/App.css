@@ -211,7 +211,7 @@ h6 {
 /* Contact */
 .section-contact {
   text-align: center;
-  display: block;
+  display: flex;
   /* background-color: #1c313c;
   border-radius: 5px; */
 }
@@ -230,6 +230,7 @@ h6 {
   white-space: nowrap;
   transition: var(--mainTransition);
   justify-content: center;
+  width: 100%;
 }
 .contact:hover {
   color: #ffee00;
@@ -248,10 +249,24 @@ h6 {
   /* text-transform: uppercase; */
   font-weight: normal;
 }
+.contact-social {
+  color: #fff;
+  margin-left: 10px;
+  align-self: center;
+  font-size: 1.2rem;
+  /* height: 28px; */
+  line-height: 0;
+  padding: 10.4px;
+  background-color: #172a35;
+  border-radius: 50%;
+}
 @media screen and (max-width: 768px) {
   .section-contact {
     margin-top: 10px;
     /* border-top: 1px solid #ffd800; */
+  }
+  .contact-social {
+    display: none;
   }
   .contact {
     /* color: white; */

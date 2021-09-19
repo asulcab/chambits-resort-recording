@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { FaWhatsapp, FaPhone } from "react-icons/fa";
+import { FaWhatsapp, FaPhone, FaFacebookF } from "react-icons/fa";
 
 // import { Link } from "react-router-dom";
 // import defaultImg from "../images/room-1.jpeg";
@@ -33,6 +33,7 @@ const Contact = () => {
                 <span><FaPhone /></span>
                 <h6>980 895 124</h6>
             </a>
+            <a className="contact-social" href="https://www.facebook.com/chambits01/" target="_blank"><FaFacebookF /></a>
         </div>
     );
 };

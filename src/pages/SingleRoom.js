@@ -60,8 +60,8 @@ export default class SingleRoom extends Component {
       <>
         <StyledHero img={images[0] || this.state.defaultBcg}>
           <Banner title={`${speciality}`}>
-            <Link to="/" className="btn-primary">
-              volver al inicio
+            <Link to="/rooms" className="btn-primary">
+              volver atrás
             </Link>
           </Banner>
         </StyledHero>

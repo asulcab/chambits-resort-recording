@@ -7,7 +7,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Divider from "@material-ui/core/Divider";
 import Typography from "@material-ui/core/Typography";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaPoundSign, FaWhatsapp } from "react-icons/fa";
 
 import Broaster01 from "../images/broaster01.jpeg";
 import Broaster02 from "../images/broaster02.jpeg";
@@ -141,6 +141,7 @@ const card = [
       </a>
   }
 ];
+
 
 function App({ classes }) {
   return (

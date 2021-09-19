@@ -54,9 +54,9 @@ footer section a span {
   } 
 }
 
-header section .logo {
-  /*transform: translateX(-87px);*/
-}
+/* header section .logo {
+  transform: translateX(-87px);
+} */
 
 header section a {
   float: right;
@@ -138,7 +138,7 @@ button:hover {
 		top: 50%;
 		transform: translateY(-50%);
 		z-index: 10;
-		background: url('http://svgshare.com/i/41_.svg') no-repeat center center / 16px;
+    background: url('../images/flecha.svg') no-repeat center center / 32px;
 		width: 32px;
 		height: 32px;
 		text-indent: -9999px;
@@ -146,8 +146,12 @@ button:hover {
 }
 
 .previousButton:hover, .nextButton:hover {
-  background: url('http://svgshare.com/i/41_.svg') no-repeat center center / 16px;
+  background: url('../images/flecha.svg') no-repeat center center / 32px;
 }
+
+/* .slider-wrapper .previousButton svg polygon, .slider-wrapper .nextButton svg polygon {
+  fill: #FFD800;
+} */
 
 .previousButton {
   left: 0;
@@ -157,6 +161,7 @@ button:hover {
 
 .previousButton:hover {
   left: -10px;
+  transition: all .3s cubic-bezier(.68,-0.55,.27,1.55);
 }
 
 .nextButton {
@@ -165,6 +170,7 @@ button:hover {
 
 .nextButton:hover {
   right: -10px;
+  transition: all .3s cubic-bezier(.68,-0.55,.27,1.55);
 }
 
 .slider-content {
