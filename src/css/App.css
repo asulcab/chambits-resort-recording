@@ -260,6 +260,10 @@ h6 {
   background-color: #172a35;
   border-radius: 50%;
 }
+.contact-social:hover {
+  background-color: #1c313c;
+  transition: var(--mainTransition);
+}
 @media screen and (max-width: 768px) {
   .section-contact {
     margin-top: 10px;

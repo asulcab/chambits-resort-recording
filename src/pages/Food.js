@@ -8,7 +8,7 @@ const Food = () => {
   return (
     <>
       <Hero hero="food">
-        <Banner title="Comida a Domicilio">
+        <Banner title="Armado de Muebles">
           <Link to="/" className="btn-primary">
             volver al inicio
           </Link>

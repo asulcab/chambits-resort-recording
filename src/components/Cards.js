@@ -9,9 +9,9 @@ import Divider from "@material-ui/core/Divider";
 import Typography from "@material-ui/core/Typography";
 import { FaPoundSign, FaWhatsapp } from "react-icons/fa";
 
-import Broaster01 from "../images/broaster01.jpeg";
-import Broaster02 from "../images/broaster02.jpeg";
-import Broaster03 from "../images/broaster03.jpeg";
+import Armario_01 from "../images/armario_01.png";
+import Centro_01 from "../images/centro_01.jpeg";
+import Cocina_01 from "../images/cocina_01.jpeg";
 import Logo from "../images/logo.png";
 
 import "../css/styles-card.css";
@@ -27,7 +27,7 @@ const styles = muiBaseTheme => ({
     }
   },
   media: {
-    paddingTop: "56.25%"
+    paddingTop: "86.25%" //"56.25%"
   },
   title: {
     fontFamily: "'Dancing Script', sans-serif, cursive",
@@ -60,19 +60,18 @@ const styles = muiBaseTheme => ({
 
 const card = [
   {
-    image: Broaster01,
-    title: 'Combo Personal',
+    image: Armario_01,
+    title: 'Ropero',
     info: [
-      '1/4 de Pollo Broaster',
-      '+ Papas',
-      '+ Ensalada',
-      '+ 450ml Gaseosa (Inca/Coca)',
+      '≈ 182 cm x 154 cm x 45 cm',
+      '6 Puertas',
+      '2 Cajones',
     ],
-    price: 'S/ 19.00',
+    price: 'S/ 50.00',
     button: 
       <a
         className="btn-primary-slider"
-        href="https://wa.me/51980895124?text=Pedido%20broaster:%20Hola.%20Quiero%20el%20combo%20personal."
+        href="https://wa.me/51980895124?text=Pedido%20de%20Servicio%20de%20armado%20de%20mueble:%20Hola.%20Quiero%20que%20arme%20mi%20ropero."
         target="_blank"
         style={{ textAlign: "center" }}
       >
@@ -83,23 +82,22 @@ const card = [
             marginRight: "5px"
           }}
         />
-        Pedir ahora
+        Quiero el servicio
       </a>
   },
   {
-    image: Broaster02,
-    title: 'Combo Familiar',
+    image: Centro_01,
+    title: 'Centro de Entretenimento',
     info: [
-      '3/4 de Pollo Broaster',
-      '+ Porción de Papas Familiar',
-      '+ Ensalada Familiar',
-      '+ 1L Gaseosa (Inca/Coca)',
+      '≈ 169 cm x 143.9 cm x 36.50 cm',
+      '2 Puertas',
+      '1 Repisa'
     ],
-    price: 'S/ 49.00',
+    price: 'S/ 50.00',
     button:
       <a
         className="btn-primary-slider"
-        href="https://wa.me/51980895124?text=Pedido%20broaster:%20Hola,%20quiero%20el%20combo%20familiar."
+        href="https://wa.me/51980895124?text=Pedido%20de%20Servicio%20de%20armado%20de%20mueble:%20Hola.%20Quiero%20que%20arme%20mi%20centro%20de%20entretenimiento."
         target="_blank"
         style={{ textAlign: "center" }}
       >
@@ -110,23 +108,22 @@ const card = [
             marginRight: "5px"
           }}
         />
-        Pedir ahora
+        Quiero el servicio
       </a>
   },
   {
-    image: Broaster03,
-    title: 'Combo Súper Familar',
+    image: Cocina_01,
+    title: 'Mueble de Cocina',
     info: [
-      '4/4 de Pollo Broaster',
-      '+ Porción de Papas Súper Familiar',
-      '+ Ensalada Familiar',
-      '+ 1.5L Gaseosa (Inca/Coca)'
+      '≈ 198 cm x 180 cm x 38.8 cm',
+      '3 Cajones',
+      '5 Puertas'
     ],
-    price: 'S/ 64.00',
+    price: 'S/ 65.00',
     button:
       <a
         className="btn-primary-slider"
-        href="https://wa.me/51980895124?text=Pedido%20broaster:%20Hola.%20Quiero%20el%20combo%20súper%20familiar."
+        href="https://wa.me/51980895124?text=Pedido%20de%20Servicio%20de%20armado%20de%20mueble:%20Hola.%20Quiero%20que%20arme%20mi%20mueble%20de%20cocina."
         target="_blank"
         style={{ textAlign: "center" }}
       >
@@ -137,7 +134,7 @@ const card = [
             marginRight: "5px"
           }}
         />
-        Pedir ahora
+        Quiero el servicio
       </a>
   }
 ];
@@ -148,10 +145,10 @@ function App({ classes }) {
     <section className="cards">
       <div className="cards-overlay"></div>
       <div className="title">
-        <span>- Pollo Broaster -</span>
+        <span>- Armado de Muebles -</span>
         {/* <div className="logCom"><img src={Logo} className="log" /></div> */}
         <div className="content-atention">
-          <span className="atention">🔥Delivery: Lun-Dom de 16:00-22:00 horas </span>
+          <span className="atention">🔥Atención: Lun-Dom de 08:00-17:00 horas </span>
         </div>
       </div>
       <div className="App">
