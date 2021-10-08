@@ -9,9 +9,9 @@ import Divider from "@material-ui/core/Divider";
 import Typography from "@material-ui/core/Typography";
 import { FaPoundSign, FaWhatsapp } from "react-icons/fa";
 
-import Armario_01 from "../images/armario_01.png";
-import Centro_01 from "../images/centro_01.jpeg";
-import Cocina_01 from "../images/cocina_01.jpeg";
+import Armario_01 from "../images/armario_1.png";
+import Centro_01 from "../images/centro_1.png";
+import Cocina_01 from "../images/cocina_1.png";
 import Logo from "../images/logo.png";
 
 import "../css/styles-card.css";
