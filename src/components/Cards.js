@@ -67,7 +67,7 @@ const card = [
       '6 Puertas',
       '2 Cajones',
     ],
-    price: 'S/ 50.00',
+    price: 'S/ 55.00',
     button: 
       <a
         className="btn-primary-slider"
@@ -93,7 +93,7 @@ const card = [
       '2 Puertas',
       '1 Repisa'
     ],
-    price: 'S/ 50.00',
+    price: 'S/ 55.00',
     button:
       <a
         className="btn-primary-slider"
