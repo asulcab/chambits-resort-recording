@@ -14,7 +14,7 @@ export default class AboutUs extends Component {
         services: [
             {
                 info: 
-                    "Chambits “LO QUIERES LO TIENES”, somos huancaínos, brindamos servicios de armado y mantenimiento de muebles, instalación de cámaras de videovigilancia, transportes diversos realizados mediante motorizados. Cumplimos los requerimientos de nuestros clientes de manera rápida, segura y confiable. Tenemos en cuenta que cada servicio es una posibilidad de progreso mutuo, es por ello que nos esforzamos día a día por entregar servicios de calidad con una gestión profesional y adecuada a las necesidades de cada cliente. Somos un equipo innovador, dinámico, con una constante búsqueda y ejecución de nuevas formas de soluciones, con el fin de mejorar la satisfacción de nuestros clientes. Somos el socio ideal en brindar soluciones integrales a tus necesidades, con responsabilidad, calidad y seguridad.",
+                    "Chambits “LO QUIERES LO TIENES”, somos huancaínos, brindamos servicios de armado y mantenimiento de muebles, instalación de cámaras de videovigilancia, transporte y traslado de artículos o productos (posible de ser transportado en bicicleta o moto lineal). Cumplimos los requerimientos de nuestros clientes de manera rápida, segura y confiable. Tenemos en cuenta que cada servicio es una posibilidad de progreso mutuo, es por ello que nos esforzamos día a día por entregar servicios de calidad con una gestión profesional y adecuada a las necesidades de cada cliente. Somos un equipo innovador, dinámico, con una constante búsqueda y ejecución de nuevas formas de soluciones, con el fin de mejorar la satisfacción de nuestros clientes. Somos el socio ideal en brindar soluciones integrales a tus necesidades, con responsabilidad, calidad y seguridad.",
                 district: "Huancayo",
                 name: "Chambits",
                 type: "Trabajo",
@@ -68,8 +68,8 @@ export default class AboutUs extends Component {
             <>
                 <Hero hero="aboutUs">
                     <Banner title="¿Quiénes Somos?">
-                        <Link to="/" className="btn-primary">
-                            volver al inicio
+                        <Link to="/rooms" className="btn-primary">
+                            servicios
                         </Link>
                     </Banner>
                 </Hero>

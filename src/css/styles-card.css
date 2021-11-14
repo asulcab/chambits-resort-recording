@@ -32,7 +32,7 @@
   font-family: 'Dancing Script',sans-serif ,cursive;
   text-align: center;
   color: #FFFFFF;
-  font-size: 45px;
+  font-size: 2.3rem;
   font-weight: 300;
   line-height: 1.5;
   /* margin-top: 15px; */
@@ -40,6 +40,16 @@
   text-shadow: 1px 1px 2px black;
   position: relative;
   display: grid;
+}
+@media screen and (min-width: 576px) {
+  .title {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .title {
+    font-size: 2.8rem;
+  }
 }
 .atention {
   font-Family: 'Roboto', Helvetica, Arial, sans-serif;

@@ -22,7 +22,7 @@ function App() {
         <Route exact path="/rooms/" component={Rooms} />
         <Route exact path="/rooms/:slug" component={SingleRoom} />
         <Route exact path="/nosotros" component={AboutUs} />
-        <Route exact path="/food-delivery" component={Food} />
+        <Route exact path="/proyects" component={Food} />
         <Route component={Error} />
       </Switch>
       <Footer />

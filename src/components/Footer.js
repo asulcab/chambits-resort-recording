@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaHeart } from 'react-icons/fa';
+import Pay from "../images/yape-plin.png";
 
 const style = {
   textAlign: 'center'
@@ -13,6 +14,9 @@ function Footer() {
           <span> <FaHeart /> </span>
           para el mundo
         </a>
+        {/* <div>
+          <img src={Pay}/>
+        </div> */}
       </section>
     </footer>
   )

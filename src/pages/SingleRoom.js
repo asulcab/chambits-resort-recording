@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+// Component Card
 import defaultBcg from "../images/room-1.jpeg";
 import Hero from "../components/Hero";
 import Banner from "../components/Banner";
@@ -6,7 +7,19 @@ import { Link } from "react-router-dom";
 import { RoomContext } from "../context";
 import { FaWhatsapp } from "react-icons/fa";
 
+// Component Card
+import { withStyles } from "@material-ui/styles";
+import Card from "@material-ui/core/Card";
+import CardMedia from "@material-ui/core/CardMedia";
+import CardContent from "@material-ui/core/CardContent";
+import Divider from "@material-ui/core/Divider";
+import Typography from "@material-ui/core/Typography";
+
 import StyledHero from "../components/StyledHero";
+
+// Style Card
+import "../css/styles-card.css";
+
 export default class SingleRoom extends Component {
   constructor(props) {
     super(props);
@@ -36,14 +49,17 @@ export default class SingleRoom extends Component {
       );
     }
     const {
+      active,
       name,
       district,
       type,
       speciality,
+      image_header,
       experience,
       home,
       workshop,
       contact,
+      proyects,
       titleDescription,
       description,
       titleDescription02,
@@ -51,17 +67,23 @@ export default class SingleRoom extends Component {
       capacity,
       size,
       extras,
-      images
+      images,
+
+      // Card define
+      card,
+      logo,
+      atention,
+      price_delivery
     } = room;
     const [main, ...defaultImages] = images;
-    console.log(defaultImages);
+    // console.log(defaultImages);
 
     return (
       <>
         <StyledHero img={images[0] || this.state.defaultBcg}>
           <Banner title={`${speciality}`}>
             <Link to="/rooms" className="btn-primary">
-              volver atrás
+              Volver a Servicios
             </Link>
           </Banner>
         </StyledHero>
@@ -94,17 +116,30 @@ export default class SingleRoom extends Component {
               <h6>Distrito: {district}</h6>
               <h6 style={{fontWeight: "600"}}>{home ? "Atención a domicilio (previa coordinación)" : ""}</h6>
               <h6>{workshop && "Atención en taller"}</h6>
-              {(contact != '')
+              <div style={{textAlign: "left", marginTop: "1em"}}>
+              {(proyects != '')
                 ?
-                  <div style={{textAlign: "left", marginTop: "1em"}}>
-                    {contact}
+                  <div>
+                    {proyects}
                   </div>
                 :
                   ''
               }
+              </div>
+              <div style={{textAlign: "left", marginTop: "1em"}}>
+              {(contact != '')
+                ?
+                  <div>
+                    {contact}
+                  </div>  
+                :
+                 ''
+              }
+              </div>
             </article>
           </div>
         </section>
+        {/* End Section Card */}
         
         <section className="room-extras">
           <div>

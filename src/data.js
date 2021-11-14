@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import room1 from "./images/details-1.jpeg";
 import room2 from "./images/details-2.jpeg";
@@ -33,6 +34,7 @@ import cam2 from "./images/details-cam-2.jpeg";
 import cam3 from "./images/details-cam-3.jpeg";
 
 import { FaWhatsapp } from "react-icons/fa";
+import { FaCubes } from "react-icons/fa";
 
 export default [
   
@@ -66,6 +68,22 @@ export default [
           />
           Contactar
         </a>
+      ,
+      proyects:
+      <Link
+          className="btn-primary-slider"
+          to="/proyects"
+          style={{ textAlign: "center", width: "100%" }}
+      >
+        <FaCubes
+          style={{
+            fontSize: "1.4rem",
+            verticalAlign: "text-bottom",
+            marginRight: "5px"
+          }}
+        />
+        Proyectos
+      </Link>
       ,
       featured: true,
       titleDescription: "Armado de Muebles",
@@ -220,7 +238,7 @@ export default [
       featured: true,
       titleDescription: "Servicio de mensajería y paquetería",
       description:
-        "A través de esta web puedes pedir cualquier producto (posible de ser transportado en moto lineal), y recibirlo en cuestión de minutos en el lugar que decidas en la ciudad de Huancayo. Solucionamos tus pedidos y traslado de artículos /productos, documentos, comida, ropa, libros, pedidos de restaurantes que no cuentan con Delivery propio, etc. de una manera rápida, segura y confiable. Estamos conectados tecnológicamente y a nuestra plataforma web, en todo momento, y estaremos donde tú nos requieras; estamos dispuestos a brindarte el mejor servicio y cumplir con la entrega de tu pedido eficientemente. ¡No te compliques! Y recupera el tiempo perdido.",
+        "A través de esta web puedes pedir cualquier producto (posible de ser transportado en bicicleta o moto lineal), y recibirlo en cuestión de minutos en el lugar que decidas en la ciudad de Huancayo. Solucionamos tus pedidos y traslado de artículos o productos, documentos, comida, ropa, libros, pedidos de restaurantes que no cuentan con Delivery propio, etc. de una manera rápida, segura y confiable. Estamos conectados tecnológicamente y a nuestra plataforma web, en todo momento, y estaremos donde tú nos requieras; estamos dispuestos a brindarte el mejor servicio y cumplir con la entrega de tu pedido eficientemente. ¡No te compliques! Y recupera el tiempo perdido.",
       titleDescription02: "",
       description02: "",
       extras: [

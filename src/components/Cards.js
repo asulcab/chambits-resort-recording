@@ -15,6 +15,7 @@ import Cocina_01 from "../images/cocina_1.png";
 import Logo from "../images/logo.png";
 
 import "../css/styles-card.css";
+import { green } from "@material-ui/core/colors";
 
 const styles = muiBaseTheme => ({
   card: {
@@ -61,6 +62,7 @@ const styles = muiBaseTheme => ({
 const card = [
   {
     image: Armario_01,
+    title_0: 'Armado',
     title: 'Ropero',
     info: [
       '≈ 182 cm x 154 cm x 45 cm',
@@ -87,6 +89,7 @@ const card = [
   },
   {
     image: Centro_01,
+    title_0: 'Armado',
     title: 'Centro de Entretenimento',
     info: [
       '≈ 169 cm x 143.9 cm x 36.50 cm',
@@ -113,6 +116,7 @@ const card = [
   },
   {
     image: Cocina_01,
+    title_0: "Armado",
     title: 'Mueble de Cocina',
     info: [
       '≈ 198 cm x 180 cm x 38.8 cm',
@@ -145,7 +149,7 @@ function App({ classes }) {
     <section className="cards">
       <div className="cards-overlay"></div>
       <div className="title">
-        <span>- Armado de Muebles -</span>
+        <span>Armado de Muebles</span>
         {/* <div className="logCom"><img src={Logo} className="log" /></div> */}
         <div className="content-atention">
           <span className="atention">🔥Atención: Lun-Dom de 08:00-17:00 horas </span>
@@ -158,6 +162,11 @@ function App({ classes }) {
               <Card className={classes.card}>
                 <CardMedia className={classes.media} image={item.image} />
                 <CardContent className={classes.content}>
+                  <div style={{width:"fit-content", backgroundColor: "green", borderRadius: ".3rem"}}>
+                  <Typography style={{color: "#fff", marginBottom: "0", fontWeight: 400, padding: ".1rem .3rem"}} className={"MuiTypography--heading"} variant={"subtitle2"} gutterBottom>
+                    { item.title_0 }
+                  </Typography>  
+                  </div>
                   <Typography className={'MuiTypography--heading'} variant={'h6'} gutterBottom>
                     {item.title}
                   </Typography>

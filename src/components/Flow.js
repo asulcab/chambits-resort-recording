@@ -46,9 +46,10 @@ const content = [
 ];
 
 const Flow = () => {
-	// autoplay={5000}
+	/* Acción en slider */
+	// touchDisabled={true}
 	return (
-		<Slider touchDisabled={true} className="slider-wrapper">
+		<Slider autoplay={5000} className="slider-wrapper">
 		{content.map((item, index) => (
 			<div
 				key={index}
