@@ -72,7 +72,7 @@ export default [
       proyects:
       <Link
           className="btn-primary-slider"
-          to="/proyects"
+          to="/proyectos"
           style={{ textAlign: "center", width: "100%" }}
       >
         <FaCubes

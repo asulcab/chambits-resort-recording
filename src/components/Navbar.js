@@ -42,7 +42,7 @@ export default class Navbar extends Component {
               <Link to="/rooms">Especialistas</Link>
             </li> */}
             <li>
-              <Link to="/proyects" style={{ color: "#ffd800" }}><FaCubes className="nav-icon-delivery" />Proyectos</Link>
+              <Link to="/proyectos" style={{ color: "#ffd800" }}><FaCubes className="nav-icon-delivery" />Proyectos</Link>
             </li>
             {/* <li>
               <Link to="/food-delivery" style={{ color: "#ffd800" }}><FaUtensils className="nav-icon-delivery" />Delivery Food!</Link>
