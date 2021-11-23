@@ -32,6 +32,12 @@ import camera from "./images/camera.jpeg";
 import cam1 from "./images/details-cam-1.jpeg";
 import cam2 from "./images/details-cam-2.jpeg";
 import cam3 from "./images/details-cam-3.jpeg";
+import logoSodimac from "./images/logo_sodimac.png";
+import logoPromart from "./images/logo_promart.png";
+import logoMaestro from "./images/logo_maestro.png";
+import logoOechsle from "./images/logo_oechsle.png";
+import logoPlazavea from "./images/logo_plazavea.png";
+import logoFalabella from "./images/logo_falabella.png";
 
 import { FaWhatsapp } from "react-icons/fa";
 import { FaCubes } from "react-icons/fa";
@@ -127,6 +133,50 @@ export default [
             }
           }
         }
+      ],
+      imagesS: [
+        {
+          fields: {
+            file: {
+              url: logoPromart
+            }
+          }
+        },
+        {
+          fields: {
+            file: {
+              url: logoSodimac
+            }
+          }
+        },
+        {
+          fields: {
+            file: {
+              url: logoMaestro
+            }
+          }
+        },
+        {
+          fields: {
+            file: {
+              url: logoOechsle
+            }
+          }
+        },
+        {
+          fields: {
+            file: {
+              url: logoPlazavea
+            }
+          }
+        },
+        {
+          fields: {
+            file: {
+              url: logoFalabella
+            }
+          }
+        }
       ]
     }
   },
@@ -202,7 +252,8 @@ export default [
             }
           }
         }
-      ]
+      ],
+      imagesS: []
     }
   },
   {
@@ -277,7 +328,8 @@ export default [
             }
           }
         }
-      ]
+      ],
+      imagesS: []
     }
   },
 

@@ -68,6 +68,7 @@ export default class SingleRoom extends Component {
       size,
       extras,
       images,
+      imagesS,
 
       // Card define
       card,
@@ -75,7 +76,8 @@ export default class SingleRoom extends Component {
       atention,
       price_delivery
     } = room;
-    const [main, ...defaultImages] = images;
+    const [main, ...defaultImages ] = images;
+    const [...imagesSponsor] = imagesS;
     // console.log(defaultImages);
 
     return (
@@ -138,6 +140,16 @@ export default class SingleRoom extends Component {
               </div>
             </article>
           </div>
+          {(imagesS != '')
+            ?
+            <div className="single-room-images" style={{padding:"2rem 0", borderTop: "1px solid", borderBottom: "1px solid", borderColor: "rgb(0, 0, 0, 0.08)", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", columnGap: "2rem"}}>
+            {imagesSponsor.map((item, index) => (
+                <img key={index} src={item} alt={name} />
+              ))}
+            </div>
+            :
+            ''
+          }          
         </section>
         {/* End Section Card */}
         

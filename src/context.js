@@ -104,8 +104,9 @@ export default class RoomProvider extends Component {
     let tempItems = items.map(item => {
       let id = item.sys.id;
       let images = item.fields.images.map(image => image.fields.file.url);
+      let imagesS = item.fields.imagesS.map(image => image.fields.file.url);
 
-      let room = { ...item.fields, images, id };
+      let room = { ...item.fields, images, id, imagesS };
       return room;
     });
     return tempItems;
