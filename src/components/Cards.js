@@ -69,7 +69,8 @@ const card = [
       '6 Puertas',
       '2 Cajones',
     ],
-    price: 'S/ 55.00',
+    price: 'S/ 45.00',
+    price_old: '55.00',
     button: 
       <a
         className="btn-primary-slider"
@@ -96,7 +97,8 @@ const card = [
       '2 Puertas',
       '1 Repisa'
     ],
-    price: 'S/ 55.00',
+    price: 'S/ 45.00',
+    price_old: '55.00',
     button:
       <a
         className="btn-primary-slider"
@@ -124,6 +126,7 @@ const card = [
       '5 Puertas'
     ],
     price: 'S/ 65.00',
+    price_old: '60.00',
     button:
       <a
         className="btn-primary-slider"
@@ -176,9 +179,20 @@ function App({ classes }) {
                     </Typography>
                   ))}
                   <Typography className={"MuiTypography--subheading"} variant={"subtitle2"} gutterBottom>
-                    <h3 style={{ marginTop: "0.5em", marginBottom: "0.5em" }}>
-                      Precio: {item.price}
+                    <h3 style={{ marginTop: "0.5em", marginBottom: "0" }}>
+                      Precio: {item.price}                      
                     </h3>
+                    {(item.price_old != '')
+                       ?
+                      <span>
+                        <em style={{fontSize: "17px", color: "red", fontWeight: "400", fontStyle: "normal"}}>Antes: S/ </em>
+                        <span className="price_old">
+                          {item.price_old}
+                        </span>
+                      </span>
+                      :
+                      ''
+                    }
                   </Typography>
                   <Divider className={classes.divider} light />
                   <div style={{textAlign: "center"}}>

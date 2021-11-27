@@ -73,6 +73,13 @@
   /* margin-top: 1rem; */
   /* margin-bottom: 1rem; */
 }
+.price_old {
+  font-size: 17px;
+  font-weight: 400;
+  text-decoration: line-through;
+  color: red;
+  /* margin-left: .5rem; */
+}
 .logCom {
   width: 100%;
   height: 100%;
