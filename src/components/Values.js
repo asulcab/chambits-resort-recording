@@ -30,7 +30,7 @@ export default class Services extends Component {
     return (
       <section className="values">
         <div className="values-background-overlay"></div>
-        <Title title="Valores" />
+        <Title title="Nuestros Valores" />
         <div className="values-center">
           {this.state.services.map(item => {
             return (

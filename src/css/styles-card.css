@@ -15,8 +15,8 @@
   position: relative;
 }
 .cards-overlay {
-  background: url("../images/defaultBcg.jpeg") center/cover no-repeat;
-  background-color: rosybrown;
+  /* background: url("../images/defaultBcg.jpeg") center/cover no-repeat; */
+  background-color: #ededed;/*rosybrown*/
   background-blend-mode: multiply;
   background-position: center center;
   /* background-attachment: fixed; */
@@ -28,38 +28,57 @@
   left: 0;
   position: absolute;
 }
-.title {
-  font-family: 'Dancing Script',sans-serif ,cursive;
+.title  {
+  font-family: 'Roboto',sans-serif ,cursive;/*Dancing Script*/
   text-align: center;
-  color: #FFFFFF;
-  font-size: 2.3rem;
-  font-weight: 300;
+  color: #1c3643;/*#FFFFFF*/
+  font-size: 1.5rem;/*2.3*/
+  /* font-weight: 300; */
   line-height: 1.5;
   /* margin-top: 15px; */
-  margin-bottom: 2rem;
-  text-shadow: 1px 1px 2px black;
+  margin-bottom: 1rem;/*2*/
+  /* text-shadow: 1px 1px 2px black; */
+  /* letter-spacing: 1px; */
   position: relative;
   display: grid;
 }
+
+.title div {
+  width: 5rem;
+  height: 5px;
+  margin: 0 auto;
+  background: #af9a7d;
+}
+
+.title h4 {
+  font-size: 1.7rem;/*2.5*/
+  margin-bottom: 1rem;
+  /* letter-spacing: 1px; */
+}
+
 @media screen and (min-width: 576px) {
-  .title {
-    font-size: 2.5rem;
+  .title h4 {
+    font-size: 1.7rem;/*2.5*/
+    margin-bottom: 1rem;
+    /* letter-spacing: 1px; */
   }
 }
 @media screen and (min-width: 992px) {
-  .title {
-    font-size: 2.8rem;
+  .title h4 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    /* letter-spacing: 1px; */
   }
 }
 .atention {
   font-Family: 'Roboto', Helvetica, Arial, sans-serif;
   text-align: center;
   color: #FFFFFF;
-  font-size: 15px;
+  /* font-size: 15px; */
   font-weight: 400;
   /* line-height: 1.5; */
-  /* margin-top: 15px; */
-  /* margin-bottom: 2rem; */
+  margin-top: 15px;
+  margin-bottom: 2rem;
   text-shadow: none;
   /* border: 1px solid currentColor; */
   border-radius: 6px;
@@ -68,10 +87,10 @@
   letter-spacing: 0.01em;
 }
 .content-atention {
-  padding: 0;
-  /* font-size: 15px; */
-  /* margin-top: 1rem; */
-  /* margin-bottom: 1rem; */
+  /* padding: 0; */
+  font-size: 15px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .price_old {
   font-size: 17px;
@@ -93,4 +112,23 @@
   width: 100%;
   min-width: 300px;
   max-width: 495px;
+}
+
+.styleWhatsapp {
+  font-size: 1.4rem;
+  vertical-align: bottom;/*text-bottom*/
+  margin-right: 2px;/*5px*/
+}
+
+.styleRuler {
+  /* vertical-align: bottom; */
+  margin-right: 3px;/*5px*/
+}
+
+.ListCard li {
+  list-style-position: inside;
+  /* color: rgb(153, 153, 153); */
+  /* list-style-type: none; */
+  /* font-weight: normal; */
+  line-height: 1.4em;
 }

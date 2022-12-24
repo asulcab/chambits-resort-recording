@@ -1,25 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import room1 from "./images/details-1.jpeg";
-import room2 from "./images/details-2.jpeg";
-import room3 from "./images/details-3.jpeg";
-import room4 from "./images/details-4.jpeg";
-import img1 from "./images/room-1.jpeg";
-import img2 from "./images/room-2.jpeg";
-import img3 from "./images/room-3.jpeg";
-import img4 from "./images/room-4.jpeg";
-import img5 from "./images/room-5.jpeg";
-import img6 from "./images/room-6.jpeg";
-import img7 from "./images/room-7.jpeg";
-import img8 from "./images/room-8.jpeg";
-import img9 from "./images/room-9.jpeg";
-import img10 from "./images/room-10.jpeg";
-import img11 from "./images/room-11.jpeg";
-import img12 from "./images/room-12.jpeg";
-import img13 from "./images/room-13.jpeg";
-import img14 from "./images/room-14.jpeg";
-import img15 from "./images/room-15.jpeg";
+
 import delivery from "./images/delivery.jpeg";
 import delivery1 from "./images/details-delivery-1.jpeg";
 import delivery2 from "./images/details-delivery-2.jpeg";
@@ -52,7 +34,7 @@ export default [
     fields: {
       slug: "carpinteria",
       name: "",
-      district: "Huancayo, Tambo, Chilca",
+      district: "Huancayo y distritos",
       type: "Carpinteria",
       speciality: "Armado de Muebles",
       experience: 7,
@@ -61,14 +43,16 @@ export default [
       contact:
         <a
           className="btn-primary-slider"
-          href="https://wa.me/51980895124?text=Armado%20de%20Muebles:%20Hola,%20quiero%20información."
+          // href="https://wa.me/51980895124?text=Armado%20de%20Muebles:%20Hola,%20quiero%20información."
+          // href="https://wa.me/51980895124?text=¡Buen%20día!%20Vengo%20de%20la%20web.%20Quiero%20información%20sobre%20el%20servicio%20de%20armado%20de%20muebles."
+          href="https://bit.ly/3WhUj1y"
           target="_blank"
           style={{ textAlign: "center", width: "100%" }}
         >
           <FaWhatsapp
             style={{
               fontSize: "1.4rem",
-              verticalAlign: "text-bottom",
+              verticalAlign: "bottom",/*text-bottom */
               marginRight: "5px"
             }}
           />
@@ -84,7 +68,7 @@ export default [
         <FaCubes
           style={{
             fontSize: "1.4rem",
-            verticalAlign: "text-bottom",
+            verticalAlign: "bottom",/*text-bottom */
             marginRight: "5px"
           }}
         />
@@ -94,15 +78,15 @@ export default [
       featured: true,
       titleDescription: "Armado de Muebles",
       description: 
-        "Realizamos el servicio de ensamblado de muebles en melamina, MDF, entre otros. Contamos con movilidad propia, y técnicos según zona, lo que asegura la llegada puntual al domicilio del cliente, y así garantizar el cumplimiento del servicio ofrecido. Nuestro personal cuenta con uniformes e identificación respectiva, brindando de esta manera mayor seguridad y confianza a nuestros clientes. Llámanos y un técnico especialista llegara a tu casa.",
+        "Armado y desarmado de muebles prefabricados, RTA, de melanina; comprados en las diferentes tiendas por departamento y afines. Contamos con movilidad propia y técnicos según zona, lo que asegura la llegada puntual al domicilio del cliente, y así garantizar el cumplimiento del servicio ofrecido. Nuestro personal cuenta con su identificación respectiva, brindando de esta manera mayor seguridad y confianza a nuestros clientes. Llámanos y un técnico especialista llegara a tu casa.",
       titleDescription02: "Servicio Express / Atención Inmediata",
       description02: "Por lo general contamos con la posibilidad de realizar el armado de tu mueble el mismo día, si deseas conocer la disponibilidad de alguno de nuestros técnicos en el momento que estás leyendo esto, por favor, consúltanos mediante una llamada telefónica o un mensaje directo haciendo clic en el botón: CONTACTAR (WhatsApp) o, también por Messenger o WhatsApp, haciendo clic en el botón (¿Necesitas ayuda?) ubicado en la parte baja del lado derecho de tu pantalla.",
       extras: [
-        "Técnicos especializados y confiables",
-        "Buenos armados, grandes experiencias",
-        "Dejamos el producto, como te lo imaginaste",
-        "Suministro de piezas de melamina y vidrio",
-        "Suministro de accesorios en general"
+        "Técnicos especializados y confiables.",
+        "Buenos armados, grandes experiencias.",
+        "Dejamos el producto, como te lo imaginaste.",
+        "Suministro de piezas de melamina.",
+        "Suministro de accesorios en general."
       ],
       images: [
         {
@@ -187,7 +171,7 @@ export default [
     fields: {
       slug: "seguridad",
       name: "",
-      district: "Huancayo, Tambo, Chilca",
+      district: "Huancayo",
       type: "Seguridad",
       speciality: "Cámaras de Vigilancia",
       experience: 6,

@@ -3,17 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^4.11.0",
-    "contentful": "^7.14.6",
-    "latest": "^0.2.0",
-    "normalize.css": "^8.0.1",
-    "react": "^16.13.1",
-    "react-animated-slider": "^2.0.0",
-    "react-dom": "^16.13.1",
-    "react-icons": "^3.10.0",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
-    "styled-components": "^5.1.1"
+    "@emailjs/browser": "3.8.0",
+    "@material-ui/core": "4.11.0",
+    "contentful": "7.14.6",
+    "latest": "0.2.0",
+    "leaflet": "1.9.2",
+    "normalize.css": "8.0.1",
+    "react": "16.14.0",
+    "react-animated-slider": "2.0.0",
+    "react-dom": "16.13.1",
+    "react-icons": "3.10.0",
+    "react-leaflet": "4.1.0",
+    "react-loader-spinner": "5.3.4",
+    "react-router-dom": "5.2.0",
+    "react-scripts": "5.0.1",
+    "react-spring": "8.0.27",
+    "styled-components": "5.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -24,16 +29,9 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ]
 }

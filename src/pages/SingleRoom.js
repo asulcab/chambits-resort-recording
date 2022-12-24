@@ -7,23 +7,25 @@ import { Link } from "react-router-dom";
 import { RoomContext } from "../context";
 import { FaWhatsapp } from "react-icons/fa";
 
-// Component Card
-import { withStyles } from "@material-ui/styles";
-import Card from "@material-ui/core/Card";
-import CardMedia from "@material-ui/core/CardMedia";
-import CardContent from "@material-ui/core/CardContent";
-import Divider from "@material-ui/core/Divider";
-import Typography from "@material-ui/core/Typography";
+import LogoStores from "../components/LogoStores";
+import AccordionInfo from "../components/AccordionInfo";
 
 import StyledHero from "../components/StyledHero";
 
 // Style Card
 import "../css/styles-card.css";
+import { Accordion } from "@material-ui/core";
 
 export default class SingleRoom extends Component {
+
+  // Scroll top window
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+  
   constructor(props) {
     super(props);
-    console.log(this.props);
+    // console.log(this.props);
     this.state = {
       slug: this.props.match.params.slug,
       defaultBcg: defaultBcg
@@ -37,6 +39,7 @@ export default class SingleRoom extends Component {
   render() {
     const { getRoom } = this.context;
     const room = getRoom(this.state.slug);
+    console.log(RoomContext)
 
     if (!room) {
       return (
@@ -78,17 +81,19 @@ export default class SingleRoom extends Component {
     } = room;
     const [main, ...defaultImages ] = images;
     const [...imagesSponsor] = imagesS;
-    // console.log(defaultImages);
 
     return (
       <>
+        {/* Cabecera */}
         <StyledHero img={images[0] || this.state.defaultBcg}>
           <Banner title={`${speciality}`}>
-            <Link to="/rooms" className="btn-primary">
-              Volver a Servicios
+            <Link to="/proyectos" className="btn-primary">
+              Proyectos
             </Link>
           </Banner>
         </StyledHero>
+
+        {/* Card */}
         <section className="single-room">
           <div className="single-room-images">
             {defaultImages.map((item, index) => (
@@ -104,10 +109,10 @@ export default class SingleRoom extends Component {
             </article>
             <article className="info">
               <h3>Info</h3>
-              {(name != '')?<h6>Nombres: {name}</h6>:''}
-              <h6>Área: {type}</h6>
-              {(experience > 0) ? <h6>Experiencia: {experience} años</h6> : ''}
-              <h6>Especialdad: {speciality}</h6>
+              {(name != '')?<h6><span>Nombres:</span>{name}</h6>:''}
+              <h6><span>Área:</span>{type}</h6>
+              {(experience > 0) ? <h6><span>Experiencia:</span>{experience} años</h6> : ''}
+              <h6><span>Especialdad:</span>{speciality}</h6>
               {/* <h6>Tamaño : {size} SQFT</h6> */}
               {/*
               <h6>
@@ -115,7 +120,7 @@ export default class SingleRoom extends Component {
                 {capacity > 1 ? `${capacity} personas` : `${capacity} persona`}
               </h6>
               */}
-              <h6>Distrito: {district}</h6>
+              <h6><span>Cobertura:</span>{district}</h6>
               <h6 style={{fontWeight: "600"}}>{home ? "Atención a domicilio (previa coordinación)" : ""}</h6>
               <h6>{workshop && "Atención en taller"}</h6>
               <div style={{textAlign: "left", marginTop: "1em"}}>
@@ -143,17 +148,24 @@ export default class SingleRoom extends Component {
         </section>
         {/* End Section Card */}
         
+        {/* Extras */}
         <section className="room-extras">
           <div>
             <h6>Extras </h6>
             <ul className="extras">
               {extras.map((item, index) => (
-                <li key={index}>- {item}</li>
+                <li key={index}>{item}</li>
               ))}
+              {console.log(extras.map((item, index) => (
+                {item}
+              )))}
+              {console.log({room})}
             </ul>
           </div>
         </section>
-        <section>
+
+        {/* Logos Tiendas */}
+        {/* <section>
           {(imagesS != '')
             ?
             <div className="single-room-images" style={{padding:"2rem 0", borderTop: "1px solid", borderColor: "rgb(0, 0, 0, 0.08)", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", columnGap: "2rem"}}>
@@ -164,6 +176,16 @@ export default class SingleRoom extends Component {
             :
             ''
           }
+        </section> */}
+
+        {/* Logos Tiendas */}
+        <section>
+          <LogoStores />
+        </section>
+
+        {/* Condiciones */}
+        <section style={{backgroundColor: '#ededed', padding: '2em 0'}}>
+          <AccordionInfo />
         </section>
       </>
     );

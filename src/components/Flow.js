@@ -49,18 +49,18 @@ const Flow = () => {
 	/* Acción en slider */
 	// autoplay={5000}
 	return (
-		<Slider touchDisabled={true} className="slider-wrapper">
-		{content.map((item, index) => (
-			<div
-				key={index}
-				className="slider-content"
-				style={{ background: `url('${item.image}') no-repeat center center` }}
-			>
-				
-				<div className="inner">
-					{item.cards}
-					<img src={item.logo} />
-					<span>{item.slogan}</span>		
+		<Slider touchDisabled={true} autoplay={5000} className="slider-wrapper">
+			{content.map((item, index) => (
+				<div
+					key={index}
+					className="slider-content"
+					style={{ background: `url('${item.image}') no-repeat center center` }}
+				>
+					
+					<div className="inner">
+						{item.cards}
+						<img src={item.logo} />
+						<span>{item.slogan}</span>		
 					<h1>{item.title}</h1>
 					<p>{item.description}</p>
 					{item.button}

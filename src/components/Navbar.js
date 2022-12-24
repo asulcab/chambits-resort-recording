@@ -16,7 +16,7 @@ export default class Navbar extends Component {
         <div className="nav-center">
           <div className="nav-header">
             <Link to="/">
-              <img src={logo} alt="Beach Resort" />
+              <img src={logo} alt="Chambits" />
             </Link>
             <button
               type="button"
@@ -30,19 +30,22 @@ export default class Navbar extends Component {
             className={this.state.isOpen ? "nav-links show-nav" : "nav-links"}
           >
             <li>
-              <Link to="/#">Inicio</Link>
+              {/* <Link to="/#">Inicio</Link> */}
             </li>
             <li>
               <Link to="/nosotros">Nosotros</Link>
             </li>
-            {/* <li>
-              <Link to="/rooms">Servicios</Link>
-            </li> */}
+            <li>
+              <Link to="/rooms/carpinteria">Servicio</Link>
+            </li>
             {/* <li>
               <Link to="/rooms">Especialistas</Link>
             </li> */}
             <li>
               <Link to="/proyectos" style={{ color: "#ffd800" }}><FaCubes className="nav-icon-delivery" />Proyectos</Link>
+            </li>
+            <li>
+              <Link to="/contacto" style={{ color: "#ffd800" }}>Contacto</Link>
             </li>
             {/* <li>
               <Link to="/food-delivery" style={{ color: "#ffd800" }}><FaUtensils className="nav-icon-delivery" />Delivery Food!</Link>

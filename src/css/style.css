@@ -27,21 +27,59 @@ header section {
 }
 
 footer {
-  position: relative;
-  top: 0;
-  left: 0;  width: 100%;
-  background: #000000;
-  z-index: 10;
+  /* position: relative; */
+  /* top: 0;
+  left: 0; */
+  /* width: 95vw;
+  max-width: 1170px; */
+  background: #1c3643;/*#f7f7f7*/
+  /* z-index: 10; */
 }
 
-footer section {
-  font-family: 'Lato', sans-serif;
-  text-align: center;
+.footer-container {
+  /* font-family: 'Lato', sans-serif; */
+  width: 95vw;
+  max-width: 1170px;
   margin: auto;
-  padding: 20px;
-  color: #ffffff;
+}
+.footer-content {
+  /* font-family: 'Lato', sans-serif; */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+}
+.footer-info {
+  text-align: left;
+  color: rgba(255, 255, 255, 0.7);
   font-size: 13px;
-  background: #1c3643;/*#f7f7f7*/
+  margin: auto 10px;
+}
+.footer-content-logo {
+  line-height: 0;
+  padding-right: 10px;
+  border-right: 1px solid rgba(255, 255, 255, .2);
+  display: none;
+}
+.footer-content-logo img {
+  width: 114px;
+}
+.footer-contact {
+  display: flex;
+  justify-content: left;
+}
+.footer-list a {
+  color: #fff;
+  margin-right: 10px;
+  opacity: .7;
+  transition: all .2s ease-in;/*all 0.3s linear*/
+}
+.footer-list a:hover {
+  opacity: 1;
+}
+.footer-info ul {
+  font-size: 32px;
+  list-style: none;
+  display: contents;
 }
 
 footer section a span {
@@ -67,7 +105,7 @@ header section a {
   outline: none;
 }
 
-button {
+/* button {
   -webkit-appearance: none;
           appearance: none;
   -webkit-filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.1));
@@ -85,7 +123,7 @@ button {
   font-weight: 400;
   font-size: 13px;
   cursor: cursor;
-}
+} */
 
 button:hover {
   color: #FFFFFF;
@@ -313,5 +351,21 @@ button:hover {
 @media screen and (max-width: 640px) {
   .slider-content .inner img {
     width: 100%;
+  }
+}
+@media screen and (min-width: 776px) {
+  .footer-content-logo {
+    line-height: 0;
+    padding-right: 10px;
+    border-right: 1px solid rgba(255, 255, 255, .2);
+    display: block;
+  }
+}
+@media screen and (min-width: 992px) {
+  .footer-content-logo {
+    line-height: 0;
+    padding-right: 10px;
+    border-right: 1px solid rgba(255, 255, 255, .2);
+    display: block;
   }
 }

@@ -1,0 +1,37 @@
+/* body {
+  background-color: #ededed;
+} */
+
+.containerAccordion {
+  width: 95vw;
+  max-width: 1170px;
+  margin: auto;
+}
+
+.containerInfo {
+  /* font-family: sans-serif; */
+  /* border: 2px solid black; */
+  border-radius: 4px;
+  padding: 4px;
+  /* text-align: center; */
+}
+
+.h3 {
+  font-size: 1.5em;
+}
+
+.h6 {
+  font-size: 1em;
+}
+.ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 1em;
+  padding-inline-start: 30px;
+}
+.ul li {
+  margin-bottom: 10px;
+}
