@@ -9,6 +9,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 import LogoStores from "../components/LogoStores";
 import AccordionInfo from "../components/AccordionInfo";
+import withRouter from "../components/withRouter";
 
 import StyledHero from "../components/StyledHero";
 
@@ -16,7 +17,7 @@ import StyledHero from "../components/StyledHero";
 import "../css/styles-card.css";
 import { Accordion } from "@material-ui/core";
 
-export default class SingleRoom extends Component {
+class SingleRoom extends Component {
 
   // Scroll top window
   componentDidMount() {
@@ -27,7 +28,8 @@ export default class SingleRoom extends Component {
     super(props);
     // console.log(this.props);
     this.state = {
-      slug: this.props.match.params.slug,
+      // slug: this.props.match.params.slug,
+      slug: this.props.params.slug,
       defaultBcg: defaultBcg
     };
   }
@@ -37,6 +39,7 @@ export default class SingleRoom extends Component {
   //   console.log(this.props);
   // }
   render() {
+    const params = this.state.slug;
     const { getRoom } = this.context;
     const room = getRoom(this.state.slug);
     console.log(RoomContext)
@@ -191,3 +194,4 @@ export default class SingleRoom extends Component {
     );
   }
 }
+export default withRouter(SingleRoom);

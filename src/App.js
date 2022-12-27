@@ -12,21 +12,22 @@ import Error from "./pages/Error";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-import { Switch, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <>
         <Navbar />
-        <Switch>
-          <Route exact path="/" component={AboutUs} />
-          <Route exact path="/rooms/" component={Rooms} />
-          <Route exact path="/rooms/:slug" component={SingleRoom} />
-          <Route exact path="/nosotros" component={AboutUs} />
-          <Route exact path="/proyectos" component={Food} />
-          <Route exact path="/contacto/" component={Contact} />
-          <Route component={Error} />
-        </Switch>
+        <Routes>
+          <Route exact path='/' element={<AboutUs />} />
+          <Route exact path='/rooms/' element={<Rooms />} />
+          {/* <Route exact path='/rooms/:slug' element={<SingleRoom />} /> */}
+          <Route exact path=':slug' element={<SingleRoom />} />
+          <Route exact path='/nosotros' element={<AboutUs />} />
+          <Route exact path='/proyectos' element={<Food />} />
+          <Route exact path='/contacto' element={<Contact />} />
+          <Route path='*' element={<Error />} />
+        </Routes>
         <Footer />
     </>
   );
