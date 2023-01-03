@@ -42,7 +42,7 @@ class SingleRoom extends Component {
     const params = this.state.slug;
     const { getRoom } = this.context;
     const room = getRoom(this.state.slug);
-    console.log(RoomContext)
+    // console.log(RoomContext)
 
     if (!room) {
       return (
@@ -159,10 +159,10 @@ class SingleRoom extends Component {
               {extras.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
-              {console.log(extras.map((item, index) => (
+              {/* {console.log(extras.map((item, index) => (
                 {item}
-              )))}
-              {console.log({room})}
+              )))} */}
+              {/* {console.log({room})} */}
             </ul>
           </div>
         </section>

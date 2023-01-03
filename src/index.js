@@ -1,18 +1,22 @@
 import React from "react";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
+
 import './css/index.css';
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { RoomProvider } from "./context";
 import { BrowserRouter } from "react-router-dom";
 
-ReactDOM.render(
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(
   <RoomProvider>
     <BrowserRouter>
       <App />
     </BrowserRouter>
   </RoomProvider>,
-  document.getElementById("root")
+  // document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change

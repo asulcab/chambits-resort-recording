@@ -1,5 +1,7 @@
 import React from "react";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
+// import { createRoot } from "react-dom/client";
+
 import { withStyles } from "@material-ui/core/styles";
 import Avatar from "@material-ui/core/Avatar";
 import Card from "@material-ui/core/Card";
@@ -43,10 +45,10 @@ const styles = muiBaseTheme => ({
   },
   content: {
     textAlign: "left",
-    padding: muiBaseTheme.spacing.unit * 3
+    padding: muiBaseTheme.spacing(3)
   },
   divider: {
-    margin: `${muiBaseTheme.spacing.unit * 3}px 0`,
+    margin: `${muiBaseTheme.spacing(3)}px 0`,
   },
   heading: {
     fontWeight: "bold"
@@ -58,7 +60,7 @@ const styles = muiBaseTheme => ({
     display: "inline-block",
     border: "2px solid white",
     "&:not(:first-of-type)": {
-      marginLeft: -muiBaseTheme.spacing.unit
+      marginLeft: -muiBaseTheme.spacing()
     }
   }
 });
@@ -68,15 +70,13 @@ const card = [
     image: Armario_01,
     title_0: 'Armado',
     title: 'Ropero',
-    info: [
-      {
-        medida: '182 cm x 154 cm x 45 cm',
-        detalles: [
+    info: {
+        measures: '182 cm x 154 cm x 45 cm',
+        details: [
           '6 Puertas',
           '2 Cajones',
-        ]
-      },      
-    ],
+        ]     
+      },
     price: 'S/ 50.00',
     price_old: '56.90',
     message: '*Precio válido en el distrito de Huancayo.',
@@ -96,15 +96,13 @@ const card = [
     image: Centro_01,
     title_0: 'Armado',
     title: 'Centro de Entretenimento',
-    info: [
-      {
-        medida: '169 cm x 143.9 cm x 36.50 cm',
-        detalles: [
+    info: {
+        measures: '169 cm x 143.9 cm x 36.50 cm',
+        details: [
           '2 Puertas',
           '1 Repisa'
-        ]
-      },      
-    ],
+        ]     
+      },
     price: 'S/ 50.00',
     price_old: '56.90',
     message: '*Precio válido en el distrito de Huancayo.',
@@ -124,15 +122,13 @@ const card = [
     image: Cocina_01,
     title_0: "Armado",
     title: 'Mueble de Cocina',
-    info: [
-      {
-        medida: '198 cm x 180 cm x 38.8 cm',
-        detalles: [
+    info: {
+        measures: '198 cm x 180 cm x 38.8 cm',
+        details: [
           '3 Cajones',
           '5 Puertas'
         ]
       },
-    ],
     price: 'S/ 80.00',
     price_old: '89.90',
     message: '*Precio válido en el distrito de Huancayo.',
@@ -152,15 +148,13 @@ const card = [
     image: ropero_lyon,
     title_0: "Armado",
     title: 'Ropero Lyon',
-    info: [
-      {
-        medida: '166 cm x 182 cm x 45 cm',
-        detalles: [
+    info: {
+        measures: '166 cm x 182 cm x 45 cm',
+        details: [
           '2 Cajones',
           '6 Puertas'
-        ]
-      },      
-    ],
+        ]      
+      },
     price: 'S/ 80.00',
     price_old: '89.90',
     message: '*Precio válido en el distrito de Huancayo.',
@@ -180,15 +174,13 @@ const card = [
     image: ropero_cali,
     title_0: "Armado",
     title: 'Ropero Cali',
-    info: [
-      {
-        medida: '103 cm x 182 cm x 45 cm',
-        detalles: [
+    info: {
+        measures: '103 cm x 182 cm x 45 cm',
+        details: [
           '2 Cajones',
           '4 Puertas',
         ]
-      }
-    ],
+    },
     price: 'S/ 50.00',
     price_old: '56.90',
     message: '*Precio válido en el distrito de Huancayo.',
@@ -208,15 +200,13 @@ const card = [
     image: comoda_cali,
     title_0: "Armado",
     title: 'Cómoda Cali',
-    info: [
-      {
-        medida: '62 cm x 91 cm x 40 cm',     
-        detalles: [
+    info: {
+        measures: '62 cm x 91 cm x 40 cm',     
+        details: [
         '4 Cajones',
         '0 Puertas'
-        ]
-      }      
-    ],
+        ]     
+    },
     price: 'S/ 50.00',
     price_old: '56.90',
     message: '*Precio válido en el distrito de Huancayo.',
@@ -262,20 +252,22 @@ function App({ classes }) {
                   <Typography className={'MuiTypography--heading'} variant={'h6'} gutterBottom>
                     {item.title}
                   </Typography>
-                  {(item.info).map(( item ) => (
-                    <Typography className={'MuiTypography--heading'} variant={'subtitle2'} gutterBottom>
-                      <FaRulerCombined className="styleRuler" />{item.medida}                   
-                      {(item.detalles).map(item =>(
-                        <ul className="ListCard">
-                          <li>{item}</li>
-                        </ul>
-                      ))}
-                    </Typography>
-                  ))}                  
+                  
+                  {/* Problem solution start */}
+                  <Typography className={'MuiTypography--heading'} variant={'subtitle2'} gutterBottom>
+                    <FaRulerCombined className="styleRuler" />{item.info.measures}
+                    {(item.info.details).map((item, i) =>(
+                      <ul className="ListCard" key={i}>
+                        <li>{item}</li>
+                      </ul>
+                    ))}
+                  </Typography>
+                  {/* Problem solution end */}
+
                   <Typography className={"MuiTypography--subheading"} variant={"subtitle2"} gutterBottom>
-                    <h3 style={{ marginTop: "0.5em", marginBottom: "0" }}>
+                    <p style={{ marginTop: "0.5em", marginBottom: "0" }}>
                       Desde: {item.price}                      
-                    </h3>
+                    </p>
                     {(item.price_old != '')
                        ?
                       <span>
@@ -306,7 +298,7 @@ function App({ classes }) {
 
 const Cards = withStyles(styles)(App);
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<Cards />, rootElement);
+// const root = createRoot(document.getElementById("root"));
+// root.render(<Cards />);
 
 export default Cards;

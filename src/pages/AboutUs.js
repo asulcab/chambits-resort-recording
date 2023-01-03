@@ -67,69 +67,69 @@ export default class AboutUs extends Component {
             }
         ]
     };
+
     
     render() {
+        const services = this.state.services.map((item, i) => 
+            <div key={i} className="about-us-logo">
+                <img src={item.logo} />
+            </div>
+        );
+        const info = this.state.services.map((item, i) => 
+            <p key={i} >{item.info}</p>
+        );
+        const politic = this.state.services[0].extras.map((item, i) => 
+            <li key={i}><h6 style={{display: "inline-flex", margin: "0"}}>{item.position}.</h6><span style={{marginLeft: "5px"}}>{item.info}</span></li>
+        );
         return (
             <>
                 <Hero hero="aboutUs">
                     <Banner title="¿Quiénes Somos?">
-                        <Link to="/rooms/carpinteria" className="btn-primary">
+                        <Link to="/carpinteria" className="btn-primary">
                             servicios
                         </Link>
                     </Banner>
                 </Hero>
                 
-                {this.state.services.map(item => {
-                    return (
-                        <>        
-                            <section className="us">
-                                <div className="us-container">
-                                    <div className="about-us">
-                                        <div className="about-us-container-logo">
-                                            <div className="about-us-logo">
-                                                <img src={item.logo} />
-                                            </div>
-                                        </div>
-                                        <div className="about-us-container-info">
-                                            <div className="about-us-desc">
-                                                {/* <h3>Detalles</h3> */}
-                                                <p>{item.info}</p>
-                                                {/* <div className="service" style={{ marginTop: "1em", textAlign:"center"}}>
-                                                    <span style={{ color: "white", margin: "0 1rem" }}><FaMagic /></span>
-                                                    <span style={{ color: "white", margin: "0 1rem" }}><FaHardHat /></span>
-                                                    <span style={{ color: "white", margin: "0 1rem" }}><FaShippingFast /></span>
-                                                    <span style={{ color: "white", margin: "0 1rem" }}><FaWaveSquare /></span>
-                                                </div> */}
-                                            </div>
-                                        </div>
-                                        {/* <article className="about-us-info">
-                                            <h3>Info</h3>
-                                            <h6>Distrito : {item.district}</h6>
-                                            <h6>Nombres: {item.name}</h6>
-                                            <h6>Área: {item.type}</h6>
-                                            <h6>Especialista en: {item.speciality}</h6>
-                                            <h6>Experiencia : {item.experience} años</h6>
-                                            <h6>{item.home ? "Atención a domicilio" : ""}</h6>
-                                            <h6>{item.workshop && "Atención en taller"}</h6>
-                                        </article> */}
-                                    </div>
+        
+                <section className="us">
+                    <div className="us-container">
+                        <div className="about-us">
+                            <div className="about-us-container-logo">
+                                {services}
+                            </div>
+                            <div className="about-us-container-info">
+                                <div className="about-us-desc">
+                                    {/* <h3>Detalles</h3> */}
+                                    {info}
+                                    {/* <div className="service" style={{ marginTop: "1em", textAlign:"center"}}>
+                                        <span style={{ color: "white", margin: "0 1rem" }}><FaMagic /></span>
+                                        <span style={{ color: "white", margin: "0 1rem" }}><FaHardHat /></span>
+                                        <span style={{ color: "white", margin: "0 1rem" }}><FaShippingFast /></span>
+                                        <span style={{ color: "white", margin: "0 1rem" }}><FaWaveSquare /></span>
+                                    </div> */}
                                 </div>
-                            </section>
-                            <Values />
-                            <section className="room-politic">
-                                <h6>Nuestra Política</h6>
-                                <ul className="extras-politic">
-                                    {this.state.services[0].extras.map(item => {
-                                        return (
-                                            <li key={`item-${item.position}`}><h6 style={{display: "inline-flex", margin: "0"}}>{item.position}.</h6><span style={{marginLeft: "5px"}}>{item.info}</span></li>
-                                        );
-                                    })}
-                                </ul>
-                            </section>
-                        </>
-                    );
-                })}
-                
+                            </div>
+                            {/* <article className="about-us-info">
+                                <h3>Info</h3>
+                                <h6>Distrito : {item.district}</h6>
+                                <h6>Nombres: {item.name}</h6>
+                                <h6>Área: {item.type}</h6>
+                                <h6>Especialista en: {item.speciality}</h6>
+                                <h6>Experiencia : {item.experience} años</h6>
+                                <h6>{item.home ? "Atención a domicilio" : ""}</h6>
+                                <h6>{item.workshop && "Atención en taller"}</h6>
+                            </article> */}
+                        </div>
+                    </div>
+                </section>
+                <Values />
+                <section className="room-politic">
+                    <h6>Nuestra Política</h6>
+                    <ul className="extras-politic">
+                        {politic}
+                    </ul>
+                </section>                
             </>
         );
     }

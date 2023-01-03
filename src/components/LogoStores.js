@@ -1,6 +1,8 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import { withStyles } from "@material-ui/core/styles";
+// import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom/client";
+
+// import { withStyles } from "@material-ui/core/styles";
 
 
 import logoPromart from "../images/logo_promart.png";
@@ -27,36 +29,34 @@ const styles = muiBaseTheme => ({
   }
 });
 
-const cards = [
-  { image: logoPromart },
-  { image: logoSodimac },
-  { image: logoMaestro },
-  { image: logoOechsle },
-  { image: logoPlazavea },
-  { image: logoFalabella }
-];
 
-function App({classes}) {
+function LogoStores() {
+  const cards = [
+    { image: logoPromart },
+    { image: logoSodimac },
+    { image: logoMaestro },
+    { image: logoOechsle },
+    { image: logoPlazavea },
+    { image: logoFalabella }
+  ];
+  const list = cards.map((card, i) => 
+    <div key={i}>
+      <img src={card.image} />
+    </div>
+  );
   return (
     <div className="room-stores">
       <p style={{marginTop: "2rem", marginBottom: "1.5rem"}}>Armamos muebles de <span style={{fontWeight: 600}}>TODAS</span> las tiendas por departamento y/o afines</p>{/*Armamos muebles de Promart, Sodimac, Maestro y muchos más. */}
       <div className="single-room-images-logos" >
-          {cards.map(card => {
-            const list =(
-            <>
-              <img src={card.image} />
-            </>
-            );
-            return list;
-          })}
+        {list}
       </div>
     </div>
   );
 }
 
-const LogoStores = withStyles(styles)(App);
+// const LogoStores = withStyles(styles)(App);
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<LogoStores />, rootElement);
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<LogoStores />);
 
 export default LogoStores;

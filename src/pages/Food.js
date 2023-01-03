@@ -16,7 +16,7 @@ const Food = () => {
     <>
       <Hero hero="food">
         <Banner title="Servicios Hogar">
-          <Link to="/rooms/carpinteria" className="btn-primary">
+          <Link to="/carpinteria" className="btn-primary">
             Volver a Servicios
           </Link>
         </Banner>
