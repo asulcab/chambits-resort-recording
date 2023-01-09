@@ -2,13 +2,13 @@ import React from "react";
 // import ReactDOM from "react-dom";
 // import { createRoot } from "react-dom/client";
 
-import { withStyles } from "@material-ui/core/styles";
-import Avatar from "@material-ui/core/Avatar";
-import Card from "@material-ui/core/Card";
-import CardMedia from "@material-ui/core/CardMedia";
-import CardContent from "@material-ui/core/CardContent";
-import Divider from "@material-ui/core/Divider";
-import Typography from "@material-ui/core/Typography";
+import { withStyles } from "@mui/styles";
+import Avatar from "@mui/material/Avatar";
+import Card from "@mui/material/Card";
+import CardMedia from "@mui/material/CardMedia";
+import CardContent from "@mui/material/CardContent";
+import Divider from "@mui/material/Divider";
+import Typography from "@mui/material/Typography";
 import { FaPoundSign, FaWhatsapp, FaRulerCombined } from "react-icons/fa";
 
 import Armario_01 from "../images/armario_1.png";
@@ -21,7 +21,62 @@ import comoda_cali from "../images/comoda_cali.png";
 import Logo from "../images/logo.png";
 
 import "../css/styles-card.css";
-import { green } from "@material-ui/core/colors";
+import { green } from "@mui/material/colors";
+
+import { styled } from '@mui/material/styles';
+
+const PREFIX = 'MyCard';
+const classes = {
+  card: `${PREFIX}-card`,
+  media: `${PREFIX}-media`, 
+  title: `${PREFIX}-title`, 
+  content: `${PREFIX}-content`,
+  divider: `${PREFIX}-divider`,
+  heading: `${PREFIX}-heading`,
+  subheading: `${PREFIX}-subheading`,
+  avatar: `${PREFIX}-avatar`,
+}
+const Root = styled('div')(({ theme }) => ({
+  [`&.${classes.card}`]: {
+    width: 300,
+    margin: "auto",
+    transition: "all .5s ease",
+    boxShadow: "0 1px 4px 0 rgba(0,0,0,0.16)",
+    "&:hover": {
+      boxShadow: "0 0 40px -6px rgba(0,0,0,.5)"
+    }
+  },
+  [`& .${classes.media}`]: {
+    paddingTop: "86.25%" 
+  },
+  [`& .${classes.title}`]: {
+    fontFamily: "'Dancing Script', sans-serif, cursive",
+    color: "#FFFFFF",
+    fontSize: "40px",
+    fontWeight: 300,
+    lineHeight: 1.5,
+  },
+  [`& .${classes.content}`]: {
+    textAlign: "left",
+    padding: theme.spacing(3)
+  },
+  [`& .${classes.divider}`]: {
+    margin: `${theme.spacing(3)}px 0`,
+  },
+  [`& .${classes.heading}`]: {
+    fontWeight: "bold"
+  },
+  [`& .${classes.subheading}`]: {
+    lineHeight: 1.8
+  },
+  [`& .${classes.avatar}`]: {
+    display: "inline-block",
+    border: "2px solid white",
+    "&:not(:first-of-type)": {
+      marginLeft: -theme.spacing()
+    }
+  },
+}));
 
 const styles = muiBaseTheme => ({
   card: {
@@ -45,10 +100,10 @@ const styles = muiBaseTheme => ({
   },
   content: {
     textAlign: "left",
-    padding: muiBaseTheme.spacing(3)
+    // padding: muiBaseTheme.spacing(3)
   },
   divider: {
-    margin: `${muiBaseTheme.spacing(3)}px 0`,
+    // margin: `${muiBaseTheme.spacing(3)}px 0`,
   },
   heading: {
     fontWeight: "bold"
@@ -60,7 +115,7 @@ const styles = muiBaseTheme => ({
     display: "inline-block",
     border: "2px solid white",
     "&:not(:first-of-type)": {
-      marginLeft: -muiBaseTheme.spacing()
+      // marginLeft: -muiBaseTheme.spacing()
     }
   }
 });
@@ -281,7 +336,7 @@ function App({ classes }) {
                     }
                   </Typography>
                   <span style={{fontSize:"11px", color: "#999999"}}>{item.message}</span>
-                  <Divider className={classes.divider} light />
+                  <Divider className={classes.divider} style={{margin: "24px 0"}} light />
                   <div style={{textAlign: "center"}}>
                     {item.button}
                   </div>

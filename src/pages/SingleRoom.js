@@ -15,7 +15,6 @@ import StyledHero from "../components/StyledHero";
 
 // Style Card
 import "../css/styles-card.css";
-import { Accordion } from "@material-ui/core";
 
 class SingleRoom extends Component {
 
