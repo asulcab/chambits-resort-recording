@@ -1,0 +1,121 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.25.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:extend:20180424':
+    - latest > npm > request > extend:
+        patched: '2023-06-27T15:59:48.338Z'
+        id: 'npm:extend:20180424'
+        path: latest > npm > request > extend
+    - latest > npm > node-gyp > request > extend:
+        patched: '2023-06-27T15:59:48.338Z'
+        id: 'npm:extend:20180424'
+        path: latest > npm > node-gyp > request > extend
+    - latest > npm > npm-registry-client > request > extend:
+        patched: '2023-06-27T15:59:48.338Z'
+        id: 'npm:extend:20180424'
+        path: latest > npm > npm-registry-client > request > extend
+  'npm:hoek:20180212':
+    - latest > npm > request > hawk > hoek:
+        patched: '2023-06-27T15:59:48.338Z'
+        id: 'npm:hoek:20180212'
+        path: latest > npm > request > hawk > hoek
+    - latest > npm > request > hawk > boom > hoek:
+        patched: '2023-06-27T15:59:48.338Z'
+        id: 'npm:hoek:20180212'
+        path: latest > npm > request > hawk > boom > hoek
+    - latest > npm > request > hawk > sntp > hoek:
+        patched: '2023-06-27T15:59:48.338Z'
+        id: 'npm:hoek:20180212'
+        path: latest > npm > request > hawk > sntp > hoek
+    - latest > npm > node-gyp > request > hawk > hoek:
+        patched: '2023-06-27T15:59:48.338Z'
+        id: 'npm:hoek:20180212'
+        path: latest > npm > node-gyp > request > hawk > hoek
+    - latest > npm > npm-registry-client > request > hawk > hoek:
+        patched: '2023-06-27T15:59:48.338Z'
+        id: 'npm:hoek:20180212'
+        path: latest > npm > npm-registry-client > request > hawk > hoek
+    - latest > npm > request > hawk > cryptiles > boom > hoek:
+        patched: '2023-06-27T15:59:48.338Z'
+        id: 'npm:hoek:20180212'
+        path: latest > npm > request > hawk > cryptiles > boom > hoek
+    - latest > npm > node-gyp > request > hawk > boom > hoek:
+        patched: '2023-06-27T15:59:48.338Z'
+        id: 'npm:hoek:20180212'
+        path: latest > npm > node-gyp > request > hawk > boom > hoek
+    - latest > npm > npm-registry-client > request > hawk > boom > hoek:
+        patched: '2023-06-27T15:59:48.338Z'
+        id: 'npm:hoek:20180212'
+        path: latest > npm > npm-registry-client > request > hawk > boom > hoek
+    - latest > npm > node-gyp > request > hawk > sntp > hoek:
+        patched: '2023-06-27T15:59:48.338Z'
+        id: 'npm:hoek:20180212'
+        path: latest > npm > node-gyp > request > hawk > sntp > hoek
+    - latest > npm > npm-registry-client > request > hawk > sntp > hoek:
+        patched: '2023-06-27T15:59:48.338Z'
+        id: 'npm:hoek:20180212'
+        path: latest > npm > npm-registry-client > request > hawk > sntp > hoek
+    - latest > npm > node-gyp > request > hawk > cryptiles > boom > hoek:
+        patched: '2023-06-27T15:59:48.338Z'
+        id: 'npm:hoek:20180212'
+        path: latest > npm > node-gyp > request > hawk > cryptiles > boom > hoek
+    - latest > npm > npm-registry-client > request > hawk > cryptiles > boom > hoek:
+        patched: '2023-06-27T15:59:48.338Z'
+        id: 'npm:hoek:20180212'
+        path: >-
+          latest > npm > npm-registry-client > request > hawk > cryptiles > boom
+          > hoek
+  'npm:qs:20170213':
+    - latest > npm > request > qs:
+        patched: '2023-06-27T15:59:48.338Z'
+        id: 'npm:qs:20170213'
+        path: latest > npm > request > qs
+    - latest > npm > node-gyp > request > qs:
+        patched: '2023-06-27T15:59:48.338Z'
+        id: 'npm:qs:20170213'
+        path: latest > npm > node-gyp > request > qs
+    - latest > npm > npm-registry-client > request > qs:
+        patched: '2023-06-27T15:59:48.338Z'
+        id: 'npm:qs:20170213'
+        path: latest > npm > npm-registry-client > request > qs
+  'npm:stringstream:20180511':
+    - latest > npm > request > stringstream:
+        patched: '2023-06-27T15:59:48.338Z'
+        id: 'npm:stringstream:20180511'
+        path: latest > npm > request > stringstream
+    - latest > npm > node-gyp > request > stringstream:
+        patched: '2023-06-27T15:59:48.338Z'
+        id: 'npm:stringstream:20180511'
+        path: latest > npm > node-gyp > request > stringstream
+    - latest > npm > npm-registry-client > request > stringstream:
+        patched: '2023-06-27T15:59:48.338Z'
+        id: 'npm:stringstream:20180511'
+        path: latest > npm > npm-registry-client > request > stringstream
+  'npm:tough-cookie:20170905':
+    - latest > npm > request > tough-cookie:
+        patched: '2023-06-27T15:59:48.338Z'
+        id: 'npm:tough-cookie:20170905'
+        path: latest > npm > request > tough-cookie
+    - latest > npm > node-gyp > request > tough-cookie:
+        patched: '2023-06-27T15:59:48.338Z'
+        id: 'npm:tough-cookie:20170905'
+        path: latest > npm > node-gyp > request > tough-cookie
+    - latest > npm > npm-registry-client > request > tough-cookie:
+        patched: '2023-06-27T15:59:48.338Z'
+        id: 'npm:tough-cookie:20170905'
+        path: latest > npm > npm-registry-client > request > tough-cookie
+  'npm:tunnel-agent:20170305':
+    - latest > npm > request > tunnel-agent:
+        patched: '2023-06-27T15:59:48.338Z'
+        id: 'npm:tunnel-agent:20170305'
+        path: latest > npm > request > tunnel-agent
+    - latest > npm > node-gyp > request > tunnel-agent:
+        patched: '2023-06-27T15:59:48.338Z'
+        id: 'npm:tunnel-agent:20170305'
+        path: latest > npm > node-gyp > request > tunnel-agent
+    - latest > npm > npm-registry-client > request > tunnel-agent:
+        patched: '2023-06-27T15:59:48.338Z'
+        id: 'npm:tunnel-agent:20170305'
+        path: latest > npm > npm-registry-client > request > tunnel-agent
