@@ -8,7 +8,7 @@
     "@emotion/styled": "^11.10.5",
     "@mui/material": "^5.11.3",
     "@mui/styles": "^5.11.2",
-    "contentful": "9.2.14",
+    "contentful": "9.3.7",
     "eslint-config-react-app": "^7.0.1",
     "latest": "0.2.0",
     "leaflet": "1.9.3",
@@ -19,11 +19,11 @@
     "react-dom": "^18.2.0",
     "react-icons": "4.7.1",
     "react-leaflet": "4.2.0",
-    "react-loader-spinner": "5.3.4",
+    "react-loader-spinner": "6.1.6",
     "react-router-dom": "6.6.1",
     "react-scripts": "5.0.1",
     "react-spring": "^8.0.27",
-    "styled-components": "5.3.6"
+    "styled-components": "6.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
